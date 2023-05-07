@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button, input {
+	border: none;
+	outline: none;
+	background: transparent;
+	color: white;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #091921;
+}
+
+
+.container {
+	max-width: 480px;
+	background: rgba(255, 255, 255, .05);
+	backdrop-filter: blur(15px);
+	padding: 10px;
+	border-radius: 10px;
+	border-left: 1px solid rgba(255, 255, 255, .05);
+	border-right: 1px solid rgba(255, 255, 255, .05);
+	box-shadow: 5px 5px 30px rgba(255, 255, 255, .02);
+}
+
+.output-container {
+	width: 100%;
+	position: relative;
+}
+
+.output-container::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 10;
+}
+
+.output-container input {
+	width: 100%;
+	text-align: right;
+	padding: 2rem 1rem;
+	font-size: 1.2rem;
+}
+
+.output-container input::placeholder {
+	color: white;
+}
+
+.input-container {
+	display:  grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 5px;
+}
+
+.input-container .clear-btn {
+	grid-column: 1 / span 2;	
+}
+
+.input-container .del-btn {
+	font-weight: bold;
+	color: 	#FF1000;	
+}
+
+.input-container button {
+	cursor: pointer;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+.input-container button:hover {
+	font-weight: bold;
+	background: rgba(255, 255, 255, .2);
+	border-radius: 5px;
+}
